@@ -1,6 +1,6 @@
 package core.marketplace.domain;
 
-import core.marketplace.enums.LoginType;
+import core.marketplace.domain.enums.LoginType;
 import jakarta.persistence.*;
 import jakarta.persistence.Id;
 import lombok.Getter;

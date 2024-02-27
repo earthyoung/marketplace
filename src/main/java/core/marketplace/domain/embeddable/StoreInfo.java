@@ -1,10 +1,9 @@
-package core.marketplace.embeddable;
+package core.marketplace.domain.embeddable;
 
 
-import core.marketplace.enums.City;
+import core.marketplace.domain.enums.City;
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.time.LocalTime;
 

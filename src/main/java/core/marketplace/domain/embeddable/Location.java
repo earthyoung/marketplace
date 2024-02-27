@@ -1,6 +1,6 @@
-package core.marketplace.embeddable;
+package core.marketplace.domain.embeddable;
 
-import core.marketplace.enums.City;
+import core.marketplace.domain.enums.City;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

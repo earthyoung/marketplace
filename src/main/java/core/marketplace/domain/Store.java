@@ -1,6 +1,6 @@
 package core.marketplace.domain;
 
-import core.marketplace.embeddable.StoreInfo;
+import core.marketplace.domain.embeddable.StoreInfo;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

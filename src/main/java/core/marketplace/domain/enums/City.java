@@ -1,4 +1,4 @@
-package core.marketplace.enums;
+package core.marketplace.domain.enums;
 
 public enum City {
     SEOUL,
