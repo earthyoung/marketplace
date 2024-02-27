@@ -22,4 +22,9 @@ public class OwnerRepository {
                 .getResultList();
     }
 
+    public Long save(Owner owner) {
+        em.persist(owner);
+        return owner.getId();
+    }
+
 }

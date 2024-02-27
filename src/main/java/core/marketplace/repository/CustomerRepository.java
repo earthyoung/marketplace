@@ -22,4 +22,9 @@ public class CustomerRepository {
                 .getResultList();
     }
 
+    public Long save(Customer customer) {
+        em.persist(customer);
+        return customer.getId();
+    }
+
 }

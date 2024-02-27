@@ -1,13 +1,13 @@
 package core.marketplace.controller;
 
-import core.marketplace.service.UserService;
+import core.marketplace.service.OwnerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-public class UserController {
+public class OwnerController {
 
-    private final UserService userService;
+    private final OwnerService ownerService;
 
 }

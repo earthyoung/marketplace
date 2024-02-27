@@ -23,10 +23,12 @@ public abstract class User {
 
     private String name;
 
+    @Column(unique = true)
     private String email;
 
     private String password;
 
+    @Enumerated(EnumType.STRING)
     private LoginType loginType;
 
     private LocalDateTime createdAt;
