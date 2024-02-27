@@ -1,5 +1,6 @@
 package core.marketplace.domain;
 
+import core.marketplace.embeddable.StoreInfo;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,6 +18,7 @@ public class Store {
     private Long id;
 
     @ManyToOne(fetch = LAZY)
+    @JoinColumn(name = "owner_id")
     private Owner owner;
 
     private String name;

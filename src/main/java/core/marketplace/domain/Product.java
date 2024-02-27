@@ -17,6 +17,7 @@ public class Product {
     private Long id;
 
     @ManyToOne(fetch = LAZY)
+    @JoinColumn(name = "store_id")
     private Store store;
 
     private String name;

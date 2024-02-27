@@ -17,8 +17,8 @@ public class Review {
     private Long id;
 
     @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "order_id")
-    private Order order;
+    @JoinColumn(name = "order_item_id")
+    private OrderItem orderItem;
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "product_id")

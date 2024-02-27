@@ -1,6 +1,7 @@
-package core.marketplace.domain;
+package core.marketplace.embeddable;
 
 
+import core.marketplace.enums.City;
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,20 +10,17 @@ import java.time.LocalTime;
 
 @Embeddable
 @Getter
-@Setter
 public class StoreInfo {
 
-    private String city;
-    private String zipcode;
+    private Location location;
     private LocalTime openTime;
     private LocalTime closeTime;
     private String phoneNumber;
 
     protected StoreInfo() {}
 
-    public StoreInfo(String city, String zipcode, LocalTime openTime, LocalTime closeTime, String phoneNumber) {
-        this.city = city;
-        this.zipcode = zipcode;
+    public StoreInfo(String city, String street, String zipcode, LocalTime openTime, LocalTime closeTime, String phoneNumber) {
+        this.location = new Location(City.valueOf(city), street, zipcode);
         this.openTime = openTime;
         this.closeTime = closeTime;
         this.phoneNumber = phoneNumber;
