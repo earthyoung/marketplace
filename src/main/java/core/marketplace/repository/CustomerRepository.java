@@ -27,4 +27,10 @@ public class CustomerRepository {
         return customer.getId();
     }
 
+    public Long remove(Customer customer) {
+        Long customerId = customer.getId();
+        em.remove(customer);
+        return customerId;
+    }
+
 }

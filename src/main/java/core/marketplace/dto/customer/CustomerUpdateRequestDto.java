@@ -1,4 +1,4 @@
-package core.marketplace.dto;
+package core.marketplace.dto.customer;
 
 import lombok.Data;
 import lombok.Getter;

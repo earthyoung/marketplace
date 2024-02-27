@@ -1,4 +1,4 @@
-package core.marketplace.dto;
+package core.marketplace.dto.customer;
 
 import core.marketplace.domain.Customer;
 import core.marketplace.domain.enums.LoginType;
@@ -11,14 +11,14 @@ import java.time.LocalDateTime;
 @Getter
 public class CustomerCreateResponseDto {
 
-    Long customerId;
+    Long id;
     LoginType loginType;
     String name;
     String email;
     LocalDateTime registeredAt;
 
     public CustomerCreateResponseDto(Customer customer) {
-        this.customerId = customer.getId();
+        this.id = customer.getId();
         this.loginType = customer.getLoginType();
         this.name = customer.getName();
         this.email = customer.getEmail();

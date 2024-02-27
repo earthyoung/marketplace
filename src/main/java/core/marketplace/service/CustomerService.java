@@ -25,5 +25,9 @@ public class CustomerService {
         return customerRepository.findOne(customerId);
     }
 
+    public Long removeCustomer(Long customerId) {
+        Customer customer = findCustomer(customerId);
+        return customerRepository.remove(customer);
+    }
 
 }

@@ -2,10 +2,7 @@ package core.marketplace.controller;
 
 import core.marketplace.domain.Customer;
 import core.marketplace.domain.enums.LoginType;
-import core.marketplace.dto.CustomerCreateRequestDto;
-import core.marketplace.dto.CustomerCreateResponseDto;
-import core.marketplace.dto.CustomerUpdateRequestDto;
-import core.marketplace.dto.CustomerUpdateResponseDto;
+import core.marketplace.dto.customer.*;
 import core.marketplace.service.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -35,6 +32,13 @@ public class CustomerController {
         Customer customer = customerService.findCustomer(customerId);
         customer.setName(requestDto.getName());
         return new CustomerUpdateResponseDto(customer);
+    }
+
+    @DeleteMapping("/api/v1/customers/{id}")
+    public CustomerDeleteResponseDto deleteCustomer(
+            @PathVariable("id") Long customerId
+    ) {
+        return new CustomerDeleteResponseDto(customerService.removeCustomer(customerId));
     }
 
 }
