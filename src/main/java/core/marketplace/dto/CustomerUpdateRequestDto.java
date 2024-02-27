@@ -5,7 +5,6 @@ import lombok.Getter;
 
 @Data
 @Getter
-public class CustomerJoinRequestDto {
+public class CustomerUpdateRequestDto {
     String name;
-    String email;
 }
