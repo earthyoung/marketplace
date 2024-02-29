@@ -27,4 +27,10 @@ public class OwnerRepository {
         return owner.getId();
     }
 
+    public Long remove(Owner owner) {
+        Long ownerId = owner.getId();
+        em.remove(owner);
+        return ownerId;
+    }
+
 }
